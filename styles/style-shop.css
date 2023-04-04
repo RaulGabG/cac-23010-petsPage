@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -75,7 +76,7 @@ body{
 
 
 /* main */
-main{
+.main{
     float: left;
     display: block;
     width: 100%;
@@ -193,7 +194,52 @@ input, textarea{
 }
 
 /*petshop page*/
+.main-shop {
+  height: 70vh;
+    background-color: #EEC373;
+}
+
 #nav a:hover {
   background-color: #EEC373;
   color: #603601;
+}
+
+.active {
+  background-color: #EEC373;
+  color: #603601;
+}
+
+.shop-cards-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.shop-card {
+    width: 50rem;
+    height: 20rem;
+    border: 1px solid #603601;
+    background-color: white;
+    border-radius: 15px; 
+    margin-top: 25px;
+    margin-left: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+.shopE-button {
+  background-color: #603601;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.shopE-footer a {
+  padding: 0 5px;
+  font-size: x-large;
+  color: #fff;
+  text-decoration: none;
+}
+
+.shopE-button:hover {
+  background-color: green;
 }
