@@ -273,10 +273,45 @@ input, textarea{
   background-color: green;
 }
 
-.shopE-footer a {
+.shopE-footer a, .shopE-footer-details a {
   padding: 0 5px;
   font-size: x-large;
   color: #fff;
   text-decoration: none;
 }
 
+/*shop detail*/
+.shop-card-details {
+  display: flex;
+  width: 90vw;
+  height: 57vh;
+  justify-content: space-around;
+}
+
+.shop-card-details img {
+  width: 95%;
+  object-fit: cover;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.shopE-body-details-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.title-details {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.text-details {
+  font-size: xx-large;
+}
+
+.shopE-footer-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
