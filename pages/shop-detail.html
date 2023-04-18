@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Hoja de estlos CSS -->
-    <link rel="stylesheet" type="text/css" href="../styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style-shop.css" />
 
     <!-- Conexión con fuentes -->
     <link
@@ -34,14 +34,16 @@
       sizes="16x16"
     />
 
-    <title>Pet'n Love</title>
+    <title>Shop</title>
   </head>
 
   <body>
     <!-- Inicio de la cabecera -->
     <header id="header">
       <div id="logo">
-        <img src="../assets/img/logo.png" alt="logotipo" />
+        <a href="../index.html"
+          ><img src="../assets/img/logo.png" alt="logotipo"
+        /></a>
       </div>
       <h1>
         <a href="../index.html"> Pet'n Love </a>
@@ -72,35 +74,34 @@
     <!-- Fin del menú de navegación -->
 
     <!-- Inicio de las secciones -->
-    <main class="main">
-      <div class="formulario">
-        <h3>Contactanos</h3>
-        <form>
-          <input
-            size="50"
-            type="text"
-            name="nombre"
-            placeholder="Ingrese su nombre"
-          />
-          <br />
-          <input type="tel" name="telefono" placeholder="Ingrese su telefono" />
-          <br />
-          <input
-            size="50"
-            type="email"
-            name="email"
-            placeholder="Ingrese e-mail"
-          />
-          <br />
-          <textarea
-            name="comentarios"
-            placeholder="Comentarios"
-            rows="5"
-            cols="30"
-          ></textarea>
-          <br />
-          <input class="boton" type="submit" value="Enviar" />
-        </form>
+    <main class="main-shop">
+      <div class="shop-cards-container">
+        <div class="shop-card shop-card-details" id="shop-element1">
+          <div>
+            <img
+              class="shopE-img-details"
+              src="https://media.istockphoto.com/id/1444508638/es/foto/rat%C3%B3n-de-juguete-para-gato-aislado-sobre-fondo-blanco.jpg?s=612x612&w=is&k=20&c=W2xeyTPQ6vqDe4IAA_TxoiN4oWVyagx_NDRZjCJBl4Q="
+              alt="Shop Element"
+            />
+          </div>
+
+          <div class="shopE-body-details-cont">
+            <div class="shopE-body-details">
+              <p class="shopE-title title-details">Ratón de tela</p>
+
+              <p class="shopE-text text-details">
+                Ideal para gatitos jugetones. ¡Super resistente! Por su tamaño
+                es ideal para llevarlo a todos lados.
+              </p>
+            </div>
+
+            <div class="shopE-footer-details">
+              <p>$1500</p>
+
+              <a href="" class="shopE-button">Comprar</a>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <!-- Fin de las secciones -->
