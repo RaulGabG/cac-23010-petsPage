@@ -7,7 +7,9 @@ const allProducts = {
       image:
         "https://media.istockphoto.com/id/1444508638/es/foto/rat%C3%B3n-de-juguete-para-gato-aislado-sobre-fondo-blanco.jpg?s=612x612&w=is&k=20&c=W2xeyTPQ6vqDe4IAA_TxoiN4oWVyagx_NDRZjCJBl4Q=",
       description: "Ideal para gatitos juguetones",
-      precio: 1500,
+      descripExt:
+        "Ideal para gatitos juguetones. ¡Super resistente! Por su tamaño es ideal para llevarlo a todos lados.",
+      price: 1500,
     },
     {
       _id: 2,

@@ -288,10 +288,15 @@ input, textarea{
   justify-content: space-around;
 }
 
+.shopE-img-details {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
 .shop-card-details img {
   width: 95%;
   object-fit: cover;
-  align-items: center;
   border-radius: 10px;
 }
 
