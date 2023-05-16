@@ -36,5 +36,116 @@ function paintCards() {
   productContainer.innerHTML = cards;
 }
 
+//categories
+let categories = [];
+
+for (const cat of arrayProducts) {
+  if (!categories.includes(cat.category)) {
+    categories.push(cat.category);
+  }
+}
+
+const categoriesContainer = document.getElementById("checkCat");
+
+function createCategories(catCompositor) {
+  let catProduct = "";
+
+  for (const cat of catCompositor) {
+    catProduct += `
+    <label>
+      <input
+        type="checkbox"
+        name="checkbox-cat"
+        class="checkbox"
+        id="${cat}"
+        value="${cat}"
+      />
+      ${cat}
+    </label>
+    `;
+  }
+  return catProduct;
+}
+
+category = createCategories(categories);
+
+categoriesContainer.innerHTML = category;
+
+//categories filter
+const catCheckBoxSelect = document.getElementById("checkCat");
+
+let catCheckBoxArray = [];
+
+catCheckBoxSelect.addEventListener("click", (e) => {
+  if (e.target.checked != undefined) {
+    if (e.target.checked) {
+      catCheckBoxArray.push(e.target.value);
+    } else {
+      let index = catCheckBoxArray.indexOf(e.target.value);
+      if (index != -1) {
+        catCheckBoxArray.splice(index, 1);
+      }
+    }
+    cards = [];
+    createCheckedCat();
+  }
+});
+
+catCheckBoxSelect.addEventListener("click", (e) => {
+  if (!e.target.checked && catCheckBoxArray.length == 0) {
+    cards = addCards(arrayProducts);
+    paintCards();
+  }
+});
+
+function catCheckCompositor(list, products) {
+  let checkedCat = [];
+
+  for (const e of products) {
+    if (list.includes(e.category)) {
+      checkedCat.push(e);
+    }
+  }
+  return checkedCat;
+}
+
+function createCheckedCat() {
+  if (catCheckBoxArray.length != 0) {
+    cards = addCards(catCheckCompositor(catCheckBoxArray, arrayProducts));
+    paintCards();
+  }
+}
+
+//search filter input
+const searchInput = document.getElementById("search");
+
+function searchFilter(list, products) {
+  let inputFilter = [];
+
+  for (const e of products) {
+    if (e.name.toLowerCase().includes(list)) {
+      inputFilter.push(e);
+    }
+  }
+  return inputFilter;
+}
+
+searchInput.addEventListener("keyup", () => {
+  if (catCheckBoxArray.length != 0) {
+    cards = addCards(
+      searchFilter(
+        searchInput.value.toLowerCase(),
+        catCheckCompositor(catCheckBoxSelect, arrayProducts)
+      )
+    );
+    paintCards();
+  } else {
+    cards = addCards(
+      searchFilter(searchInput.value.toLowerCase(), arrayProducts)
+    );
+    paintCards();
+  }
+});
+
 //calling functions
 paintCards();
