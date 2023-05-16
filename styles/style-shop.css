@@ -227,6 +227,36 @@ body{
   justify-content: space-around;
 }
 
+/*filters*/
+.filter {
+  width: 99%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.categories, .search-field {
+  border: none;
+}
+
+.no-results-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-results img {
+  width: 15%;
+  margin-bottom: 1rem;
+}
+
 /*media queries*/
 @media screen and (max-width:800px) {
   #nav {
