@@ -3,11 +3,15 @@ let arrayProducts = allProducts.products;
 
 const productContainer = document.getElementById("products-container");
 
+const noResultsMssg = document.getElementById("no-results");
+
 //creating cards of products
 function addCards(productsParam) {
   let productsCards = "";
-  for (const product of productsParam) {
-    productsCards += `
+
+  if (productsParam.length != 0) {
+    for (const product of productsParam) {
+      productsCards += `
         <div class="shop-card" id="shop-element${product._id}">
           <img class="shopE-img" src="${product.image}" alt="${product.image}" />
 
@@ -25,6 +29,15 @@ function addCards(productsParam) {
             <a href="" class="shopE-button">Comprar</a>
           </div>
         </div>
+    `;
+    }
+    noResultsMssg.innerHTML = ``;
+  } else {
+    noResultsMssg.innerHTML = `
+    <div class="no-results">
+      <h2>¡No se encontró ningún producto! Prueba con otra categoría o revisa la ortografía</h2>
+      <img src="../assets/img/cat-error.png" alt="error cat">
+    </div>
     `;
   }
   return productsCards;
