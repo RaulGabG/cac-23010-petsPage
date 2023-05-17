@@ -257,6 +257,31 @@ body{
   margin-bottom: 1rem;
 }
 
+/*api gallery*/
+.gallery-Container {
+  margin-top: 3rem;
+}
+
+.gallery-Container h2 {
+  margin-left: 1rem;
+  color: #603601;
+}
+
+.gallery {
+  width: 95vw;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.imgGall img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 10px;
+  box-shadow: -5px -5px 5px #603601;
+}
+
 /*media queries*/
 @media screen and (max-width:800px) {
   #nav {
