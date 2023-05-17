@@ -292,11 +292,11 @@ body{
   margin-left: -15px;
 }
 
-#form-search-bttn i:hover {
+#form-search-button i:hover {
   color: #fff;
 }
 
-#form-search-bttn i {
+#form-search-button i {
   color: #603601;
   background-color: #EEC373;
 }
