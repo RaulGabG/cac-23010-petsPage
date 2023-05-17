@@ -1,3 +1,47 @@
+//api
+const urlApiImg =
+  "http://shibe.online/api/shibes?count=5&urls=true&httpsUrls=true";
+
+let allImg = [];
+let imgGallery;
+
+async function getImg() {
+  try {
+    let response = await fetch(urlApiImg);
+    let data = await response.json();
+
+    allImg = data;
+
+    imgGallery = addImgGall(allImg);
+
+    paintImgGallery();
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+getImg();
+
+//creating gallery of img
+const imgGallContainer = document.getElementById("img-gallery");
+
+function addImgGall(imgUrlArray) {
+  let imgUrl = "";
+
+  for (const img of imgUrlArray) {
+    imgUrl += `
+    <div class="imgGall">
+      <img src="${img}" />
+    </div>
+    `;
+  }
+  return imgUrl;
+}
+
+function paintImgGallery() {
+  imgGallContainer.innerHTML = imgGallery;
+}
+
 //variables
 let arrayProducts = allProducts.products;
 
