@@ -1,6 +1,6 @@
 //api
 const urlApiImg =
-  "http://shibe.online/api/shibes?count=5&urls=true&httpsUrls=true";
+  "https://shibe.online/api/shibes?count=5&urls=true&httpsUrls=true";
 
 let allImg = [];
 let imgGallery;
