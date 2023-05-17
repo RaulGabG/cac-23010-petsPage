@@ -121,6 +121,10 @@ body{
     margin: 10px 0;
 }
 
+.shop-card:hover {
+  transform: scale(1.1, 1.1);
+}
+
 .shop-card {
     width: 18rem;
     height: 20rem;
@@ -281,6 +285,44 @@ body{
   border-radius: 10px;
   box-shadow: -5px -5px 5px #603601;
 }
+
+.submit-bttn button {
+  background-color: #EEC373;
+  border: none;
+  margin-left: -15px;
+}
+
+#form-search-bttn i:hover {
+  color: #fff;
+}
+
+#form-search-bttn i {
+  color: #603601;
+  background-color: #EEC373;
+}
+
+.button-up {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+}
+
+.button-up a {
+    color: #EEC373;
+    background-color: #603601;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: x-large;
+    border: 1px solid #603601;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.button-up a:hover {
+    background-color: #EEC373;
+    color: #603601;
+    font-size: xx-large;
+  }
 
 /*media queries*/
 @media screen and (max-width:800px) {

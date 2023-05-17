@@ -192,7 +192,7 @@ searchInput.addEventListener("keyup", () => {
     cards = addCards(
       searchFilter(
         searchInput.value.toLowerCase(),
-        catCheckCompositor(catCheckBoxSelect, arrayProducts)
+        catCheckCompositor(catCheckBoxArray, arrayProducts)
       )
     );
     paintCards();
@@ -202,6 +202,30 @@ searchInput.addEventListener("keyup", () => {
     );
     paintCards();
   }
+});
+
+//input button
+const inputButton = document.getElementById("form-search-button");
+
+function filterInputCardsButton() {
+  if (catCheckBoxArray.length != 0) {
+    cards = addCards(
+      searchFilter(
+        searchInput.value.toLowerCase(),
+        catCheckCompositor(catCheckBoxArray, arrayProducts)
+      )
+    );
+    paintCards();
+  } else {
+    cards = addCards(
+      searchFilter(searchInput.value.toLowerCase(), arrayProducts)
+    );
+    paintCards();
+  }
+}
+
+inputButton.addEventListener("click", (e) => {
+  filterInputCardsButton();
 });
 
 //calling functions
