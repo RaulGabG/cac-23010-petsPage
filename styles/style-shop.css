@@ -123,6 +123,7 @@ body{
 
 .shop-card:hover {
   transform: scale(1.1, 1.1);
+  transition: 0.5s;
 }
 
 .shop-card {
